@@ -17,8 +17,10 @@ function loadTemplate() {
 
     // Try multiple paths for different environments
     const paths = [
+        "./template/kwitansi.jpg",           // For GitHub Pages and web root (dist/)
         "../template/kwitansi.jpg",           // For Live Server from web/ folder
         "../../template/kwitansi.jpg",        // Alternative
+        "template/kwitansi.jpg",              // Relative
         "/app/src/main/assets/template/kwitansi.jpg", // Absolute from project root
         "file:///android_asset/template/kwitansi.jpg"  // Android WebView
     ];

@@ -1,0 +1,53 @@
+name: Deploy Web to GitHub Pages
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Prepare web files
+        run: |
+          mkdir -p dist
+          cp app/src/main/assets/web/index.html dist/
+          mkdir -p dist/css dist/js
+          cp app/src/main/assets/web/css/style.css dist/css/
+          cp app/src/main/assets/web/js/config.js dist/js/
+          cp app/src/main/assets/web/js/app.js dist/js/
+          mkdir -p dist/template
+          cp app/src/main/assets/template/kwitansi.jpg dist/template/
+          echo "Web files prepared"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
