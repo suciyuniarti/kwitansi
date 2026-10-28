@@ -1,0 +1,24 @@
+# INSTRUKSI EDIT TEMPLATE KWITANSI
+
+**File cadangan sudah dibuat:** `app/src/main/assets/template/kwitansi_backup.jpg`
+
+## Area yang Harus Dikosongkan
+
+Buka `kwitansi.jpg` dengan image editor (Photoshop, GIMP, Paint.NET, dll). Kosongkan area berikut:
+
+1. **Telah Diterima Dari:** Kosongkan teks nama yang tercetak setelah label "Telah Diterima Dari". Pertahankan labelnya.
+2. **Uang Sebesar:** Kosongkan teks terbilang yang tercetak setelah label "Uang Sebesar". Pertahankan labelnya.
+3. **Untuk Pembayaran:** Kosongkan keterangan yang tercetak setelah label "Untuk Pembayaran". Pertahankan labelnya.
+4. **Pita biru (nominal):** Kosongkan nominal yang tercetak di dalam pita biru.
+
+## Aturan Penting
+- **PERTAHANKAN:** Logo Hastaka, Logo Wonderful Indonesia/Pesona Indonesia, tanda tangan, rekening, alamat, bingkai, garis, nomor kwitansi `INV-HH-2406-050`
+- **JANGAN:** Menghapus elemen statis lain
+- **JANGAN:** Membuat template baru di Canva atau AI generator
+- **JANGAN:** Membuat kotak putih mencolok - kosongkan area dengan cara menghapus teks saja, biarkan latar belakang/template tetap terlihat natural
+- **JANGAN:** Menimpa atau menghapus logo/tanda tangan/rekening/alamat
+
+## Hasil yang Diharapkan
+Setelah edit, `kwitansi.jpg` harus memiliki label-label tetap ada, tapi isi dinamis (nama, terbilang, keterangan, nominal pita biru) sudah dikosongkan agar bisa diisi oleh aplikasi.
+
+Simpan dengan nama `kwitansi.jpg` (timpa file yang ada, atau ganti). Cadangan ada di `kwitansi_backup.jpg`.
