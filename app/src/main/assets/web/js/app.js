@@ -75,12 +75,9 @@ function updateForm() {
     const nominalInput = document.getElementById('nominal');
     const keteranganInput = document.getElementById('keterangan');
 
-    if (jurusan === 'IPA') {
-        nominalInput.value = formatRupiah(PRICE_CONFIG.IPA);
-        keteranganInput.value = KETERANGAN_CONFIG.IPA;
-    } else if (jurusan === 'IPS') {
-        nominalInput.value = formatRupiah(PRICE_CONFIG.IPS);
-        keteranganInput.value = KETERANGAN_CONFIG.IPS;
+    if (PRICE_CONFIG[jurusan] !== undefined) {
+        nominalInput.value = formatRupiah(PRICE_CONFIG[jurusan]);
+        keteranganInput.value = KETERANGAN_CONFIG[jurusan];
     } else {
         nominalInput.value = '';
         keteranganInput.value = '';
@@ -123,10 +120,9 @@ function buatKwitansi() {
     ctx.fillStyle = '#000000';
     ctx.textBaseline = 'top';
 
-    const harga = jurusan === 'IPA' ? PRICE_CONFIG.IPA : PRICE_CONFIG.IPS;
-    const terbilang = jurusan === 'IPA' ? TERBILANG_CONFIG.IPA : TERBILANG_CONFIG.IPS;
-    const keterangan = jurusan === 'IPA' ? KETERANGAN_CONFIG.IPA : KETERANGAN_CONFIG.IPS;
-
+    const harga = PRICE_CONFIG[jurusan];
+    const terbilang = TERBILANG_CONFIG[jurusan];
+    const keterangan = KETERANGAN_CONFIG[jurusan];
     // Telah Diterima Dari
     ctx.font = TEXT_CONFIG.diterimaDari.font;
     ctx.fillText(namaSiswa, TEXT_CONFIG.diterimaDari.x, TEXT_CONFIG.diterimaDari.y);
