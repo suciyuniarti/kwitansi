@@ -9,14 +9,14 @@ const PRICE_CONFIG = {
 
 // Terbilang untuk "Uang Sebesar"
 const TERBILANG_CONFIG = {
-    IPS: "Tiga Ratus Empat Puluh Ribu Rupiah",
-    IPA: "Empat Ratus Lima Ribu Rupiah",
+    IPA: "Tiga Ratus Empat Puluh Ribu Rupiah",
+    IPS: "Empat Ratus Lima Ribu Rupiah",
     Soshum: "Tiga Ratus Empat Puluh Ribu Rupiah"
 };
 
 // Nama tampilan jurusan
 const JURUSAN_LABEL = {
-    IPS: "Misos",
+    IPS: "Miso",
     IPA: "Migo",
     Soshum: "Soshum"
 };
@@ -26,9 +26,9 @@ const RECEIPT_NUMBER = "INV-HH-2406-050";
 
 // Keterangan Pembayaran
 const KETERANGAN_CONFIG = {
-    IPS: "Untuk Pembayaran: Biaya Program \u201cGoes to Campus SMA Telkom Bandung\u201d ke PKN STAN & UI Tanggal 26 November 2026. Misos.",
+    IPS: "Untuk Pembayaran: Biaya Program \u201cGoes to Campus SMA Telkom Bandung\u201d ke PKN STAN & UI Tanggal 26 November 2026. Penambahan Rp65.000,- ke iMuseum Kedokteran UI. Miso.",
 
-    IPA: "Untuk Pembayaran: Biaya Program \u201cGoes to Campus SMA Telkom Bandung\u201d ke PKN STAN & UI Tanggal 26 November 2026. Penambahan Rp 65.000,- ke iMuseum Kedokteran UI. Migo.",
+    IPA: "Untuk Pembayaran: Biaya Program \u201cGoes to Campus SMA Telkom Bandung\u201d ke PKN STAN & UI Tanggal 26 November 2026. Migo.",
 
     Soshum: "Untuk Pembayaran: Biaya Program \u201cGoes to Campus SMA Telkom Bandung\u201d ke PKN STAN & UI Tanggal 26 November 2026. Soshum."
 };
