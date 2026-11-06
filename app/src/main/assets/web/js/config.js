@@ -2,8 +2,8 @@
 // Konfigurasi Kwitansi Digital
 // Nominal berdasarkan jurusan
 const PRICE_CONFIG = {
-    IPS: 340000,
-    IPA: 405000,
+    IPA: 340000,
+    IPS: 405000,
     Soshum: 340000
 };
 
